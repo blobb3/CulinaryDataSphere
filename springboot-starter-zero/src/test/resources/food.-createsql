@@ -1,0 +1,154 @@
+-- phpMyAdmin SQL Dump
+-- version 4.9.0.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Apr 15, 2020 at 07:41 PM
+-- Server version: 10.4.6-MariaDB
+-- PHP Version: 7.3.8
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `food`
+--
+
+CREATE TABLE `food` (
+  `id` bigint(100) NOT NULL,
+  `name` varchar(255) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `food`
+--
+
+INSERT INTO `food` (`id`, `birthdate`, `name`) VALUES
+  (id, name) values (1, 'Curry Powder Madras');
+  (id, name) values (2, 'Muffin Carrot - Individual');
+  (id, name) values (3, 'Curry Powder');
+  (id, name) values (4, 'Quail - Whole, Bone - In');
+  (id, name) values (5, 'Buffalo - Striploin');
+  (id, name) values (6, 'Horseradish Root');
+  (id, name) values (7, 'Artichoke - Fresh');
+  (id, name) values (8, 'Wine - Hardys Bankside Shiraz');
+  (id, name) values (9, 'Pastry - Banana Muffin - Mini');
+  (id, name) values (10, 'Nut - Almond, Blanched, Sliced');
+  (id, name) values (11, 'Beer - Sleemans Honey Brown');
+  (id, name) values (12, 'Yogurt - Cherry, 175 Gr');
+  (id, name) values (13, 'Shiro Miso');
+  (id, name) values (14, 'Pork - Bacon,back Peameal');
+  (id, name) values (15, 'Pork - Bacon,back Peameal');
+  (id, name) values (16, 'Veal - Eye Of Round');
+  (id, name) values (17, 'Brandy Cherry - Mcguinness');
+  (id, name) values (18, 'Long Island Ice Tea');
+  (id, name) values (19, 'Raspberries - Fresh');
+  (id, name) values (20, 'Syrup - Monin - Blue Curacao');
+  (id, name) values (21, 'Cherries - Frozen');
+  (id, name) values (22, 'Apple - Custard');
+  (id, name) values (23, 'Broom And Brush Rack Black');
+  (id, name) values (24, 'Trueblue - Blueberry Cranberry');
+  (id, name) values (25, 'Capers - Pickled');
+  (id, name) values (26, 'Creme De Cacao White');
+  (id, name) values (27, 'Wine - White, Schroder And Schyl');
+  (id, name) values (28, 'Fond - Chocolate');
+  (id, name) values (29, 'Icecream - Dstk Strw Chseck');
+  (id, name) values (30, 'Wine - Zonnebloem Pinotage');
+  (id, name) values (31, 'Nestea - Iced Tea');
+  (id, name) values (32, 'Cinnamon Buns Sticky');
+  (id, name) values (33, 'Carbonated Water - Blackcherry');
+  (id, name) values (34, 'Energy Drink - Redbull 355ml');
+  (id, name) values (35, 'Beef - Baby, Liver');
+  (id, name) values (36, 'Lettuce - Radicchio');
+  (id, name) values (37, 'Cheese - Sheep Milk');
+  (id, name) values (38, 'Wine - Bourgogne 2002, La');
+  (id, name) values (39, 'Rice - Long Grain');
+  (id, name) values (40, 'Beets');
+  (id, name) values (41, 'Juice - Apple, 500 Ml');
+  (id, name) values (42, 'Chilli Paste, Ginger Garlic');
+  (id, name) values (43, 'Spice - Montreal Steak Spice');
+  (id, name) values (44, 'Worcestershire Sauce');
+  (id, name) values (45, 'Lemonade - Black Cherry, 591 Ml');
+  (id, name) values (46, 'Apple - Macintosh');
+  (id, name) values (47, 'Table Cloth 72x144 White');
+  (id, name) values (48, 'Bag - Bread, White, Plain');
+  (id, name) values (49, 'Tomato - Tricolor Cherry');
+  (id, name) values (50, 'Broom - Angled');
+  (id, name) values (51, 'Wine - White, Chardonnay');
+  (id, name) values (52, 'Oneshot Automatic Soap System');
+  (id, name) values (53, 'Appetizer - Smoked Salmon / Dill');
+  (id, name) values (54, 'Shrimp - 16/20, Peeled Deviened');
+  (id, name) values (55, 'Bread - Hot Dog Buns');
+  (id, name) values (56, 'Jolt Cola - Red Eye');
+  (id, name) values (57, 'Milk - 2% 250 Ml');
+  (id, name) values (58, 'Plastic Wrap');
+  (id, name) values (59, 'Daikon Radish');
+  (id, name) values (60, 'The Pop Shoppe - Root Beer');
+  (id, name) values (61, 'Pie Shells 10');
+  (id, name) values (62, 'Flour - Masa De Harina Mexican');
+  (id, name) values (63, 'Beef - Rib Roast, Capless');
+  (id, name) values (64, 'Heavy Duty Dust Pan');
+  (id, name) values (65, 'Pail With Metal Handle 16l White');
+  (id, name) values (66, 'Sage Ground Wiberg');
+  (id, name) values (67, 'Pepper - Paprika, Spanish');
+  (id, name) values (68, 'Cake Slab');
+  (id, name) values (69, 'Beef - Salted');
+  (id, name) values (70, 'Cheese - Valancey');
+  (id, name) values (71, 'Orange - Canned, Mandarin');
+  (id, name) values (72, 'Bread - White, Unsliced');
+  (id, name) values (73, 'Corn Meal');
+  (id, name) values (74, 'Soup Campbells');
+  (id, name) values (75, 'Eel - Smoked');
+  (id, name) values (76, 'Pie Box - Cello Window 2.5');
+  (id, name) values (77, 'Ice Cream Bar - Oreo Cone');
+  (id, name) values (78, 'Milkettes - 2%');
+  (id, name) values (79, 'Calypso - Strawberry Lemonade');
+  (id, name) values (80, 'Wine - Balbach Riverside');
+  (id, name) values (81, 'Cleaner - Lime Away');
+  (id, name) values (82, 'Brownies - Two Bite, Chocolate');
+  (id, name) values (83, 'Pasta - Ravioli');
+  (id, name) values (84, 'Lemonade - Mandarin, 591 Ml');
+  (id, name) values (85, 'Macaroons - Two Bite Choc');
+  (id, name) values (86, 'Icecream Bar - Del Monte');
+  (id, name) values (87, 'Grenadillo');
+  (id, name) values (88, 'Carbonated Water - Orange');
+  (id, name) values (89, 'Bread - Hot Dog Buns');
+  (id, name) values (90, 'Piping - Bags Quizna');
+  (id, name) values (91, 'Five Alive Citrus');
+  (id, name) values (92, 'Wine - Fontanafredda Barolo');
+  (id, name) values (93, 'Veal - Eye Of Round');
+  (id, name) values (94, 'Mangoes');
+  (id, name) values (95, 'Mushroom - Lg - Cello');
+  (id, name) values (96, 'Muffin Hinge Container 6');
+  (id, name) values (97, 'Wine - Red, Antinori Santa');
+  (id, name) values (98, 'Gelatine Leaves - Bulk');
+  (id, name) values (99, 'Truffle Cups - Red');
+  (id, name) values (100, 'Star Fruit');
+
+
+--
+-- Indexes for table `food`
+--
+ALTER TABLE `food`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for table `food`
+--
+ALTER TABLE `food`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

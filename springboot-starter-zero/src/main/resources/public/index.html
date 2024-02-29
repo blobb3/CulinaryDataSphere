@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html lang="en">
+
+
+<head>
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width,initial-scale=1'>
+	<title>Data Management: Food-Stuff</title>
+
+	<!-- CSS only -->
+	<link rel="stylesheet" type="text/css"
+		href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
+
+	<!-- Load Bootstrap JavaScript components -->
+	<script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+	<script>
+
+		function go() {
+			syso("> Running ...");
+
+
+			$.get('http://localhost:8080/projectxx/' + query, function (response) {
+				displayIngredients(response);
+			});
+
+			setTimeout(function () {
+				syso("> Done");
+			}, 1000);
+
+		}
+		/*
+		$(document).ready(function() {
+        $.ajax({
+          type: "GET",
+          url: "/ingredients",
+          dataType: "json",
+          success: function(data) {
+            var html = "";
+            $.each(data, function(index, ingredients) {
+              html += "<tr><td>" + ingredients.id + "</td><td>" + ingredients.name + "</td><td>" ;
+            });
+            $("#INGREDIENT").append(html);
+          }
+        });
+      });
+
+		let ingredients = [];
+
+		function getIngredients() {
+			axios.get("http://localhost:8080/ingredients").then((response) => {
+				ingredients = response.data;
+			});
+		}
+
+		function displayIngredients(ingredients) {
+
+			document.getElementById("ingredientTable").innerHTML = "";
+			ingredients.forEach(displayIngredient);
+		}
+
+		function displayPerson(ingredient) {
+			var tr = document.createElement("tr");
+			var ltd = document.createElement("td");
+			var rtd = document.createElement("td");
+			ltd.innerHTML = ingredient.name;
+			rtd.innerHTML = ingredient.amount;
+			tr.appendChild(ltd);
+			tr.appendChild(rtd);
+			document.getElementById("ingredientTable").appendChild(tr);
+		}
+
+		function syso(message) {
+
+			document.getElementById("console").innerHTML = "";
+			var result = document.createElement("p");
+			result.innerHTML = message;
+			document.getElementById("console").appendChild(result);
+		} */
+
+		let ingredients = [];
+
+		fetch('/ingredients')
+			.then(response => response.json())
+			.then(ingredients => {
+				ingredients = response.data;
+			});
+
+	</script>
+</head>
+
+<header>
+	<section id="colorful">
+		<div class="container">
+			<h1>Data Management</h1>
+			<p>Final Exam!</p>
+		</div>
+	</section>
+</header>
+
+<body>
+	<blockquote class="wp-block-quote">
+		<h1>Welcome to my Online Food Advisor!</h1>
+	</blockquote>
+		<!-- speech bubble -->
+		<div class="header">
+			<p class="sprechblase">
+				<big id="test">Food CHALLENGE:</big>
+				<br>
+				<i id="test">
+					Between the ages of 25 and 51,<br id="test">women consume <span 
+						style="background-color:#cef4d1"
+						>about 1800 calories a day<br></span
+					> ,men <span 
+					style="background-color:#cef4d1"
+					>about 2300.</span
+				</i>
+			</p>
+		</div>
+		<br>
+	<section id="about">
+		<h1>Add Ingredients</h1>
+		<br>
+		<label for="author">Add Food into Database:</label>
+		<select class="form-select" bind:value={ingredient.id} id="ingredient">
+			<option value={ingredient.id}>food</option>
+		</select>
+	</section>
+	<div class="container">
+		<form>
+			<br>
+			<div class="form-group">
+				<label for="inputLocation">
+					<h1>Foodtype</h1>
+				</label> <input type="number" class="form-control" id="inputBirthdate" aria-describedby="inputHelp"
+					placeholder="Enter Foodtype OR Leave Empty"><small id="inputHelp"
+					class="form-text text-muted">Please enter a
+					foodnumber (e.g. 489912023) or leave empty to display all foods</small>
+			</div>
+			<button type="button" class="btn btn-primary btn-success" onclick="go()">Go
+				:-)</button>
+		</form>
+		<br>
+		<h1>Ingredients in a List</h1>
+		<p>&nbsp;</p>
+		<table id="INGREDIENTS"  class="table table-sm table-striped">
+			<thead>
+			  <tr>
+				<th scope="col-md">#</th>
+				<th scope="col-md">ID</th>
+				<th scope="col-md">Name</th>
+			  </tr>
+			</thead>
+			<tbody>
+				<tr th:each="ingredient : ${ingredient}">
+				<th scope="row">1</th>
+				<td th:text="${ingredient.id}"></td>
+			  </tr>
+			  <tr th:each="ingredient : ${ingredient}">
+				<th scope="row">2</th>
+				<td th:text="${ingredient.name}"></td>
+			  </tr>
+			</tbody>
+		  </table>
+		<p>&nbsp;</p>
+		<div id="console"></div>
+	</div>
+	<blockquote class="wp-block-quote">
+		<h1>Important to know!</h1>
+	</blockquote>
+	<section id="about">
+		<div class="container">
+			<h2>About Food</h2>
+			<p>Food supplies the body with vital substances every day, provides energy
+				and ideally keeps us healthy and fit. If the food is "optimal", it provides
+				the body with all the nutrients in the necessary quantity that the body
+				needs to balance broken down and excreted substances.</p>
+		</div>
+	</section>
+	<br>
+	<blockquote class="wp-block-quote">
+		<h1>What does the webiste offer!</h1>
+	</blockquote>
+
+	<section id="about">
+		<div class="container">
+			<h2>Food as medicine</h2>
+			<ul class="buts">
+				<li>Physical medicine knows of two substances that are involved in making you happy.</li>
+				<li>It is a substance produced naturally in the body. </li>
+				<li>Serotonin is produced when you eat foods with the amino acid tryptophan.</li>
+			</ul>
+		</div>
+	</section>
+	<br>
+</body>
+
+<footer>
+	<!--contact -->
+	<section id="contact">
+		<div class="container">
+			<br />
+			<p>
+				<img class="gif" src="https://media.giphy.com/media/kp8xp7w2CsLSJ1i1M9/giphy.gif" align="right"
+					width="159" height="159" alt="GIF" />
+				<big>Contact Info</big><br>
+				Author: Janine Heinemeyer<br />Email:
+				<a href="mailto:janine.heinemeyer@gmail.com">test.mustermann@test.com</a>
+				<br>
+				Copyright © 2023 Data Management. All Rights Reserved.
+			</p>
+		</div>
+	</section>
+</footer>
+
+</html>
+
+<style>
+	/* header */
+	header {
+		background-color: rgb(50, 73, 11);
+		color: #fff;
+		text-align: center;
+		padding: 1em;
+	}
+
+	header h1 {
+		font-size: 3em;
+		margin-bottom: 0;
+	}
+
+	/*body*/
+	body {
+		font-family: Arial, sans-serif;
+		line-height: 1.6;
+		font-size: 16px;
+		margin: 0;
+		padding: 0;
+		background-color: #cef4d1;
+	}
+
+	/* style the colorful section */
+	#colorful {
+		background-image: linear-gradient(to right, #cef4d1, rgb(50, 73, 11));
+		color: #fff;
+		text-align: center;
+		padding: 4em;
+	}
+
+	/* style the about section */
+	#about {
+		background-color: #f5f5f5;
+		padding: 4em;
+	}
+
+	/* style the services section */
+	#services {
+		padding: 4em;
+	}
+
+	#services ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	/* style the contact section */
+	footer {
+		background-image: linear-gradient(to left, #cef4d1, rgb(50, 73, 11));
+		color: #fff;
+		padding: 4em;
+		text-align: center;
+	}
+
+	/*blockquote*/
+	.wp-block-quote {
+		padding-left: 1em;
+		overflow-wrap: break-word;
+		padding: 14px;
+		margin-bottom: 30px;
+		border-color: black;
+	}
+
+	blockquote {
+		font-size: 18px;
+		quotes: none;
+		background-color: rgb(50, 73, 11);
+		color: white;
+		font-style: italic;
+		letter-spacing: 1px;
+		display: block;
+		text-align: center;
+	}
+
+	a {
+		color: rgb(50, 73, 11);
+	}
+
+	.buts {
+		list-style-image: url(/images/bullet.png);
+		text-align: left;
+	}
+	/*SPRECHBLASE*/
+	/*text*/
+	#test {
+		color:rgb(50, 73, 11);
+	}
+	  /*Oval*/
+	  .sprechblase {
+        position: relative;
+        padding: 1rem;
+        border: 4px solid darkgreen;
+        margin: 5px auto;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        border-radius: 20px;
+        background: #fff;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        width: 350px;
+    }
+
+    /*Dreieck*/
+    .sprechblase:before {
+        content: " ";
+        position: absolute;
+        width: 0;
+        height: 0;
+        left: 30px;
+        top: 100%;
+        border: 20px solid;
+        border-color: darkgreen transparent transparent darkgreen;
+    }
+
+    /*dreieck innen*/
+    .sprechblase:after {
+        content: " ";
+        position: absolute;
+        width: 0;
+        height: 0;
+        left: 34px;
+        top: 100%;
+        border: 15px solid;
+        border-color: #ffffff transparent transparent #ffffff;
+    }
+</style>
