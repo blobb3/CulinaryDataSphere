@@ -1,6 +1,6 @@
 # CulinaryDataSphere
 
-CulinaryDataSphere is a project developed as part of the Oral Exam Project (Fall Semester 2022) within the Data Management course at ZHAW. It aims to create a data management system for culinary information.
+CulinaryDataSphere is a project developed within the Data Management course at ZHAW (Fall Semester 2022). It aims to create a data management system for culinary information.
 
 ## Project Description
 
